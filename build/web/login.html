@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<title>Student Login</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <script type="text/javascript" src="jquery.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/carousel.js"></script>
+        <link rel='stylesheet' type='text/css' href='login.css'/>
+        <link rel="stylesheet" href="jquery-ui.css"/>
+	<script type="text/javascript" src="jquery-ui.js"></script>
+        <script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+        <script type="text/javascript" src="jquery.leanModal.min.js"></script>
+        <link rel="stylesheet" href="css/bootstrap-datepicker3.min.css"/>
+        <link rel="stylesheet" href="css/opensans.css"/>
+        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css"/>
+        <link rel="stylesheet" href="css/bootstrap-datepicker3.standalone.min.css"/>
+        <script type="text/javascript" src="js/bootstrap-datepicker.min.js"></script>
+        
+        <script type="text/javascript">
+           $.fn.datepicker.defaults.format = "dd/mm/yyyy";
+        </script>
+	<style>
+          .carousel-inner > .item > img,
+            .carousel-inner > .item > a > img {
+            width: 100%;
+            margin: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="outer">
+            <div id="upper_float">
+		<div id="logo">
+                    <a href = "http://manipal.edu/mu.html"><img src="logo2.jpg"/></a>
+                </div>
+                <div id="logomit">
+                    <img src="images/mitlogo.png" style="height:84px;width:86px;"/>
+                </div>
+            </div>
+         
+            <!-- Carousel
+================================================== -->
+        <div id="myCarousel" class="carousel slide">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="images/edubuilding.jpg" style="height: 100%;width: 100%">
+                    <div class="container">
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+            </div>
+            <div class="item">
+                <img src="images/hostels.jpg" style="height: 100%;width: 100%">
+                    <div class="container">
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+            </div>
+            <div class="item">
+                <img src="images/mitlogo.png" style="height: 100%;width: 100%">
+                    <div class="container">
+                        <div class="carousel-caption">
+                        </div>
+                    </div>
+            </div>
+        </div>
+  
+        <a id="modal_trigger" href="#modal" class="btn" style="background:#003366"><span style="color:white;font-weight:bold;font-family:Open Sans;">Click here to Login</span></a>
+        <div id="modal" class="popupContainer" style="display:none;">
+        <header class="popupHeader">
+            <span class="header_title" style="color:white;font-family:Open Sans;">Welcome!</span>
+            <span class="modal_close"><i class="fa fa-times"></i></span>
+        </header>
+        <section class="popupBody">
+        <!--<div class="action_btns">
+            <a href="#" id="login_form" class="btn">Login</a>
+        </div>
+       --> 
+            <!-- Username & Password Login form -->
+        <div class="user_login">
+            <form action="loginvalidate.jsp" autocomplete="off">
+            <label style="font-family:Open Sans;color:#003366;">User ID</label>
+            <input type="text" name="ID" maxlength="9" style="margin-left:20px;background:whitesmoke;height:33px;border-radius:3px;width:270px;" required>
+            <br>
+            <label style="font-family:Open Sans;color:#003366;">Date of birth</label>
+            
+            <div class="input-group date" data-provide="datepicker">
+            <input type="text" class="form-control" name="password" autocomplete="off" placeholder="DD/MM/YYYY" required style="margin-left:20px;background:whitesmoke;width:230px;">
+            <div class="input-group-addon">
+            <span class="glyphicon glyphicon-th"></span>
+            </div>
+            </div>
+            <br>
+                                    
+            <div class="action_btns">
+            <input type="submit" class="btn btn-info" value="Submit" style="color:black; margin-left:105px;background:#003366;color:white;">
+            </div>
+            </form>
+        </div>
+        </section>
+        </div>
+  
+  <!-- Controls -->
+  <!--<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <i class="glyphicon glyphicon-chevron-left"></i>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <i class="glyphicon glyphicon-chevron-right"></i>
+  </a>  -->
+</div>
+<script type="text/javascript">
+	$("#modal_trigger").leanModal({top : 200, overlay : 0.5, closeButton: ".modal_close" });
+
+        $(function(){
+            $(".user_login").show();
+        });
+</script>
+            <footer class="footer"><span style="opacity:0.7;">Developed for Department of CSE by Mayank Sanghai and Sahil Ajmera.</span>
+        </footer>
+	</div> 
+    </body>
+</html>
